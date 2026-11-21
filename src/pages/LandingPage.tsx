@@ -95,7 +95,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, isDark }) 
           </h1>
 
           <p className="text-lg leading-relaxed text-[var(--ink-secondary)]">
-            An offline-first mobile app for your self-hosted HomeBox server. Find any item, scan
+            An offline-first mobile app for your self-hosted HomeBox server. Find any item, look up
             asset IDs and barcodes, log maintenance, and keep editing when the signal drops.
           </p>
 

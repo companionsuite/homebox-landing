@@ -82,8 +82,9 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({ onNavigate }) => (
         <li>
           <strong>On your device:</strong> Sign out removes the stored sign-in token. In the app,
           Settings, then Reset local data erases the offline cache, the queue of unsent changes, the
-          settings and the stored sign-in details. Deleting the app removes everything it kept on the
-          device.
+          settings and the stored sign-in details. Deleting the app removes its offline cache and
+          settings. iOS can keep Keychain items after an app is deleted, so use Reset local data before
+          you delete the app to remove the stored sign-in details too.
         </li>
       </ul>
     </LegalSection>
