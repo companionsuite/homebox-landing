@@ -9,7 +9,7 @@ It works with [HomeBox](https://github.com/sysadminsmedia/homebox).
 
 - Vite + React + TypeScript + Tailwind CSS v4
 - Screenshots in `public/screenshots/` are captured from the app with demo data, in light and dark mode
-- Deployed to GitHub Pages from the `gh-pages` branch
+- Built with `npm run build` and deployed from `site/`
 
 ## Local Development
 
@@ -26,7 +26,6 @@ npm run build
 
 The build writes the site to `site/`, with a copy of `index.html` for each route and a `404.html` fallback.
 
-## Deploy to GitHub Pages
+## Deploy
 
-Commit the contents of `site/` to the `gh-pages` branch and push it.
-`public/CNAME` carries the custom domain into every build.
+The site is built with `npm run build` and deployed from `site/`.

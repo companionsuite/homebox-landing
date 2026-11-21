@@ -1,4 +1,4 @@
-// GitHub Pages has no rewrites, so each client route gets its own copy of
+// The static host has no rewrites, so each client route gets its own copy of
 // index.html. That gives /connect/, /privacy/, /support/ and /terms/ a real HTTP 200.
 import { copyFileSync, mkdirSync, writeFileSync } from 'node:fs';
 
