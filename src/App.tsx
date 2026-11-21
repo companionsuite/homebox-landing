@@ -21,6 +21,16 @@ const NAV = [
   { to: '/terms', label: 'Terms' },
 ] as const;
 
+// Every route ships the same index.html, so the tab title is set per page here.
+const HOME_TITLE = document.title;
+const PAGE_TITLES: Record<string, string> = {
+  '/connect': 'How to Connect',
+  '/setup': 'How to Connect',
+  '/privacy': 'Privacy Policy',
+  '/support': 'Support',
+  '/terms': 'Terms of Use',
+};
+
 export const App: React.FC = () => {
   const [path, setPath] = useState<string>(routeFromLocation);
   const [isDark, setIsDark] = useState<boolean>(() =>
@@ -32,6 +42,11 @@ export const App: React.FC = () => {
     window.addEventListener('popstate', onPopState);
     return () => window.removeEventListener('popstate', onPopState);
   }, []);
+
+  useEffect(() => {
+    const name = PAGE_TITLES[path];
+    document.title = name ? `${name} | ${SITE_CONFIG.appName}` : HOME_TITLE;
+  }, [path]);
 
   const navigate = useCallback((target: string) => {
     const [rawPath, hash] = target.split('#');
