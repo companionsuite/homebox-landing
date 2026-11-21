@@ -190,6 +190,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, isDark }) 
           <div className="flex flex-wrap gap-3 text-sm">
             <SiteLink to="/connect" onNavigate={onNavigate} className="text-link">How to Connect</SiteLink>
             <span aria-hidden className="text-[var(--ink-muted)]">&middot;</span>
+            <SiteLink to="/support" onNavigate={onNavigate} className="text-link">Support</SiteLink>
+            <span aria-hidden className="text-[var(--ink-muted)]">&middot;</span>
             <SiteLink to="/privacy" onNavigate={onNavigate} className="text-link">Privacy Policy</SiteLink>
             <span aria-hidden className="text-[var(--ink-muted)]">&middot;</span>
             <SiteLink to="/terms" onNavigate={onNavigate} className="text-link">Terms of Use</SiteLink>

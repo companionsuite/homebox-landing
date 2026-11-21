@@ -5,6 +5,7 @@ import { ExternalLink, SiteLink } from './components/SiteLink';
 import { LandingPage } from './pages/LandingPage';
 import { ConnectPage } from './pages/ConnectPage';
 import { PrivacyPage } from './pages/PrivacyPage';
+import { SupportPage } from './pages/SupportPage';
 import { TermsPage } from './pages/TermsPage';
 
 /** The route inside the site, with the deploy base and any trailing slash removed. */
@@ -62,6 +63,8 @@ export const App: React.FC = () => {
       <ConnectPage onNavigate={navigate} />
     ) : path === '/privacy' ? (
       <PrivacyPage onNavigate={navigate} />
+    ) : path === '/support' ? (
+      <SupportPage onNavigate={navigate} />
     ) : path === '/terms' ? (
       <TermsPage onNavigate={navigate} />
     ) : (
@@ -110,12 +113,13 @@ export const App: React.FC = () => {
       <footer className="border-bs border-[var(--border-subtle)] bg-[var(--bg-surface-1)] py-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 text-sm text-[var(--ink-muted)] sm:px-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="grid gap-1">
-            <p>&copy; 2026 {SITE_CONFIG.appName}. Independent companion app for HomeBox.</p>
+            <p>&copy; 2026 {SITE_CONFIG.publisher}. {SITE_CONFIG.appName} is an unofficial client for HomeBox.</p>
             <p>Not affiliated with or endorsed by the HomeBox project.</p>
           </div>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <SiteLink to="/" onNavigate={navigate} className="nav-link px-0">Home</SiteLink>
             <SiteLink to="/connect" onNavigate={navigate} className="nav-link px-0">How to Connect</SiteLink>
+            <SiteLink to="/support" onNavigate={navigate} className="nav-link px-0">Support</SiteLink>
             <SiteLink to="/privacy" onNavigate={navigate} className="nav-link px-0">Privacy Policy</SiteLink>
             <SiteLink to="/terms" onNavigate={navigate} className="nav-link px-0">Terms of Use</SiteLink>
             <ExternalLink href={SITE_CONFIG.issuesRepoUrl} className="nav-link px-0">GitHub</ExternalLink>

@@ -9,7 +9,7 @@ interface LegalPageProps {
   children: React.ReactNode;
 }
 
-/** The shared frame of the Privacy and Terms pages. */
+/** The shared frame of the Privacy, Support and Terms pages. */
 export const LegalPage: React.FC<LegalPageProps> = ({ icon: PageIcon, title, children }) => (
   <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 sm:py-16">
     <div className="mbe-8 grid justify-items-start gap-3">
@@ -19,7 +19,8 @@ export const LegalPage: React.FC<LegalPageProps> = ({ icon: PageIcon, title, chi
       </span>
       <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">{title}</h1>
       <p className="text-sm text-[var(--ink-muted)]">
-        Effective date: November 21, 2026 &middot; App: {SITE_CONFIG.appName} ({SITE_CONFIG.appId})
+        Last updated: November 21, 2026 &middot; App: {SITE_CONFIG.appName} ({SITE_CONFIG.appId}) &middot;
+        Publisher: {SITE_CONFIG.publisher}
       </p>
     </div>
     <div className="grid gap-6 text-[15px] leading-relaxed text-[var(--ink-secondary)]">{children}</div>

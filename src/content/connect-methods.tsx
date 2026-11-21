@@ -16,7 +16,7 @@ export interface ConnectionMethod {
   troubleshooting: string[];
 }
 
-const Code: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+export const Code: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <code className="font-mono text-[0.92em]">{children}</code>
 );
 

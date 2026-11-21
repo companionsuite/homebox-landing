@@ -1,6 +1,6 @@
 # homebox-landing
 
-Landing page, How to Connect guide, Terms of Use, and Privacy Policy for **HomeBox Companion** (`app.homebox.companion`), hosted at [https://companionsuite.github.io/homebox-landing/](https://companionsuite.github.io/homebox-landing/).
+Landing page, How to Connect guide, Support page, Terms of Use, and Privacy Policy for **HomeBox Companion** (`app.homebox.companion`), hosted at [https://homebox.milliways.si/](https://homebox.milliways.si/).
 
 HomeBox Companion is an independent companion app for [HomeBox](https://github.com/sysadminsmedia/homebox).
 It is not affiliated with or endorsed by the HomeBox project.
@@ -29,3 +29,4 @@ The build writes the site to `site/`, with a copy of `index.html` for each route
 ## Deploy to GitHub Pages
 
 Commit the contents of `site/` to the `gh-pages` branch and push it.
+`public/CNAME` carries the custom domain into every build.

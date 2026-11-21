@@ -1,5 +1,5 @@
 import React from 'react';
-import { Camera, HardDrive, Lock, Server, ShieldCheck, Sparkles } from 'lucide-react';
+import { Camera, HardDrive, History, KeyRound, Lock, Mail, Server, ShieldCheck, Sparkles, Trash2, Users } from 'lucide-react';
 import { SITE_CONFIG } from '../config/site';
 import { ExternalLink, SiteLink } from '../components/SiteLink';
 import { LegalPage, LegalSection } from '../components/LegalPage';
@@ -10,70 +10,103 @@ interface PrivacyPageProps {
 
 export const PrivacyPage: React.FC<PrivacyPageProps> = ({ onNavigate }) => (
   <LegalPage icon={ShieldCheck} title="Privacy Policy">
-    <LegalSection icon={Lock} title="1. Nothing collected by us, no analytics">
+    <p>
+      {SITE_CONFIG.publisher} publishes {SITE_CONFIG.appName}, an unofficial client for{' '}
+      <ExternalLink href={SITE_CONFIG.homeboxUrl} className="text-link">
+        HomeBox
+      </ExternalLink>
+      , a self-hosted home inventory server. It is not affiliated with or endorsed by the HomeBox project.
+    </p>
+
+    <LegalSection icon={Lock} title="1. We collect nothing">
       <p>
-        {SITE_CONFIG.appName} is built for a private, self-hosted HomeBox server. We run no developer
-        server that collects, stores or reads your inventory, your credentials or how you use the app. The
-        app contains <strong>no third-party analytics, no advertising SDKs and no telemetry or crash
-        trackers</strong>.
+        {SITE_CONFIG.publisher} runs no server for this app. We don&apos;t collect, store or see your
+        inventory, your photos, your sign-in details or how you use the app. The app has{' '}
+        <strong>no analytics, no advertising, no tracking and no crash reporting</strong>. We don&apos;t
+        sell or share any data, because we never receive any.
       </p>
     </LegalSection>
 
-    <LegalSection icon={Server} title="2. A direct connection to your HomeBox server">
+    <LegalSection icon={Server} title="2. The app talks only to your HomeBox server">
       <p>
-        In the mobile app, network requests go <strong>only</strong> to the HomeBox server address you
-        enter, with any proxy headers you add (for example a Cloudflare Access service token).
+        The mobile app sends requests <strong>only</strong> to the HomeBox server address you enter on the
+        Connect screen, along with any extra request headers you add for that server. You run that server,
+        so your data stays under your control.
       </p>
+    </LegalSection>
+
+    <LegalSection icon={KeyRound} title="3. Sign-in details and the device Keychain">
       <ul className="list-disc space-y-1.5 ps-5">
         <li>
-          <strong>Email and password:</strong> your credentials are sent once to your HomeBox server to
-          sign in. The app never stores your password.
+          <strong>Email and password:</strong> your password is sent once to your HomeBox server to sign
+          in. The app never stores it. Your email address is kept on the device so the Connect screen can
+          fill it in next time.
         </li>
         <li>
-          <strong>Tokens, API keys and proxy headers:</strong> these are stored on your device, in the iOS
-          Keychain or the Android Keystore, and used only to authenticate requests to your server.
+          <strong>Tokens, API keys and extra request headers:</strong> these are stored on the device in
+          the iOS Keychain, or the Android Keystore on Android. They are used only to sign requests to your
+          server.
         </li>
       </ul>
     </LegalSection>
 
-    <LegalSection icon={HardDrive} title="3. Storage on your device and the offline cache">
+    <LegalSection icon={HardDrive} title="4. Data kept on your device">
       <p>
-        To work offline, {SITE_CONFIG.appName} keeps your settings, a cached copy of your items,
-        locations, tags, item types, maintenance and statistics, item photos it has shown you, and any
-        changes still waiting to be sent. This data stays in the app&apos;s local storage on your device.
-        Deleting the app removes it.
+        To work offline, the app keeps your settings, a cached copy of your items, locations, tags,
+        maintenance and statistics, item photos it has shown you, and changes still waiting to be sent.
+        This data stays in the app&apos;s storage on your device.
       </p>
     </LegalSection>
 
-    <LegalSection icon={Camera} title="4. Camera, photo and local network permissions">
+    <LegalSection icon={Camera} title="5. Camera, photos and local network">
       <p>
-        The app asks for the camera only when you take a photo of an item or scan, and for the photo
-        library only when you choose an existing photo or save an item photo. On iOS it also asks to use
-        the local network so it can reach a HomeBox server in your home. Photos go only to your own
-        HomeBox server.
+        The app uses the camera only when you take a photo of an item. It uses the photo picker only when
+        you choose an existing photo to attach to an item, and the photo library only when you save an
+        item photo. Barcodes and asset IDs are typed in, not read by the camera. Photos go only to your own
+        HomeBox server. On iOS, the app asks for local network access so it can reach a HomeBox server in
+        your home.
       </p>
     </LegalSection>
 
-    <LegalSection icon={Sparkles} title="5. AI assist (self-hosted web version only)">
-      <p>
-        AI assist is <strong>not available in the mobile app</strong>. If you run the separate
-        self-hosted web companion server and choose to use AI assist, the item name, notes or photo and
-        your list of locations and tags are sent to <strong>Google Gemini</strong> with your own API key,
-        or to your own OpenAI-compatible model, depending on how you set up that server.
-      </p>
+    <LegalSection icon={Sparkles} title="6. AI assist is not in the mobile app">
+      <p>The mobile app has no AI features and sends nothing to any AI service.</p>
     </LegalSection>
 
-    <LegalSection title="6. Contact and support">
+    <LegalSection icon={Trash2} title="7. How to delete your data">
+      <ul className="list-disc space-y-1.5 ps-5">
+        <li>
+          <strong>On your server:</strong> you can delete items, photos or your whole account on your
+          HomeBox server. In the app, go to Settings, then Account, then Delete account to delete your
+          account on that server.
+        </li>
+        <li>
+          <strong>On your device:</strong> Sign out removes the stored sign-in token. In the app,
+          Settings, then Reset local data erases the offline cache, the queue of unsent changes, the
+          settings and the stored sign-in details. Deleting the app removes everything it kept on the
+          device.
+        </li>
+      </ul>
+    </LegalSection>
+
+    <LegalSection icon={Users} title="8. Children">
+      <p>The app is not aimed at children and collects no data from anyone.</p>
+    </LegalSection>
+
+    <LegalSection icon={History} title="9. Changes to this policy">
+      <p>If this policy changes, we&apos;ll post the new version on this page with a new date.</p>
+    </LegalSection>
+
+    <LegalSection icon={Mail} title="10. Contact">
       <p>
-        For privacy questions or support, open an issue on{' '}
+        For privacy questions, open an issue on{' '}
         <ExternalLink href={`${SITE_CONFIG.issuesRepoUrl}/issues`} className="text-link">
           GitHub
         </ExternalLink>
-        . You can also go back to the{' '}
-        <SiteLink to="/#support" onNavigate={onNavigate} className="text-link">
-          Support section
-        </SiteLink>
-        .
+        . The{' '}
+        <SiteLink to="/support" onNavigate={onNavigate} className="text-link">
+          Support page
+        </SiteLink>{' '}
+        has help with connecting.
       </p>
     </LegalSection>
   </LegalPage>

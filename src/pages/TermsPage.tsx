@@ -52,9 +52,9 @@ export const TermsPage: React.FC<TermsPageProps> = ({ onNavigate }) => (
           Privacy Policy
         </SiteLink>
         . Send questions through{' '}
-        <ExternalLink href={`${SITE_CONFIG.issuesRepoUrl}/issues`} className="text-link">
+        <SiteLink to="/support" onNavigate={onNavigate} className="text-link">
           our support page
-        </ExternalLink>
+        </SiteLink>
         .
       </p>
     </LegalSection>
