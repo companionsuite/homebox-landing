@@ -11,7 +11,7 @@ interface PrivacyPageProps {
 export const PrivacyPage: React.FC<PrivacyPageProps> = ({ onNavigate }) => (
   <LegalPage icon={ShieldCheck} title="Privacy Policy">
     <p>
-      {SITE_CONFIG.publisher} publishes {SITE_CONFIG.appName}, an unofficial client for{' '}
+      {SITE_CONFIG.publisher} publishes {SITE_CONFIG.appName}, an unofficial, independent app that works with{' '}
       <ExternalLink href={SITE_CONFIG.homeboxUrl} className="text-link">
         HomeBox
       </ExternalLink>

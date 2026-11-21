@@ -1,5 +1,5 @@
 export const SITE_CONFIG = {
-  appName: 'HomeBox Companion',
+  appName: 'Companion for HomeBox',
   appId: 'app.homebox.companion',
   issuesRepoUrl: 'https://github.com/companionsuite/homebox-landing',
   publisher: 'Companion Suite',

@@ -87,7 +87,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, isDark }) 
         <div className="grid justify-items-start gap-6">
           <span className="pill">
             <img src={withBase('/icon.svg')} alt="" width={14} height={14} className="size-3.5 flex-none rounded-[4px]" />
-            Companion app for HomeBox
+            {SITE_CONFIG.appName} (unofficial)
           </span>
 
           <h1 className="font-display text-[length:var(--text-hero)] leading-[1.08] font-bold tracking-tight">

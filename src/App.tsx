@@ -128,8 +128,11 @@ export const App: React.FC = () => {
       <footer className="border-bs border-[var(--border-subtle)] bg-[var(--bg-surface-1)] py-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 text-sm text-[var(--ink-muted)] sm:px-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="grid gap-1">
-            <p>&copy; 2026 {SITE_CONFIG.publisher}. {SITE_CONFIG.appName} is an unofficial client for HomeBox.</p>
-            <p>Not affiliated with or endorsed by the HomeBox project.</p>
+            <p>&copy; 2026 {SITE_CONFIG.publisher}.</p>
+            <p>
+              {SITE_CONFIG.appName} is an unofficial, independent app. It is not affiliated with or endorsed by the
+              HomeBox project.
+            </p>
           </div>
           <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
             <SiteLink to="/" onNavigate={navigate} className="nav-link px-0">Home</SiteLink>

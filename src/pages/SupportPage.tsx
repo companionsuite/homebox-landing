@@ -12,8 +12,8 @@ interface SupportPageProps {
 export const SupportPage: React.FC<SupportPageProps> = ({ onNavigate }) => (
   <LegalPage icon={LifeBuoy} title="Support">
     <p>
-      {SITE_CONFIG.appName} is published by {SITE_CONFIG.publisher}. It&apos;s an unofficial client for
-      HomeBox and isn&apos;t affiliated with or endorsed by the HomeBox project. If the problem is with the
+      {SITE_CONFIG.appName} is published by {SITE_CONFIG.publisher}. It&apos;s an unofficial, independent app and
+      isn&apos;t affiliated with or endorsed by the HomeBox project. If the problem is with the
       HomeBox server itself, see the{' '}
       <ExternalLink href={SITE_CONFIG.homeboxUrl} className="text-link">
         HomeBox project

@@ -1,9 +1,9 @@
 # homebox-landing
 
-Landing page, How to Connect guide, Support page, Terms of Use, and Privacy Policy for **HomeBox Companion** (`app.homebox.companion`), hosted at [https://homebox.milliways.si/](https://homebox.milliways.si/).
+Landing page, How to Connect guide, Support page, Terms of Use, and Privacy Policy for **Companion for HomeBox** (`app.homebox.companion`), hosted at [https://homebox.milliways.si/](https://homebox.milliways.si/).
 
-HomeBox Companion is an independent companion app for [HomeBox](https://github.com/sysadminsmedia/homebox).
-It is not affiliated with or endorsed by the HomeBox project.
+Companion for HomeBox is an unofficial, independent app. It is not affiliated with or endorsed by the HomeBox project.
+It works with [HomeBox](https://github.com/sysadminsmedia/homebox).
 
 ## Stack
 

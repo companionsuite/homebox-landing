@@ -19,7 +19,7 @@ export const TermsPage: React.FC<TermsPageProps> = ({ onNavigate }) => (
 
     <LegalSection title="2. Independent companion and your own server">
       <p>
-        {SITE_CONFIG.appName} is an independent companion app for{' '}
+        {SITE_CONFIG.appName} is an unofficial, independent app that works with{' '}
         <ExternalLink href={SITE_CONFIG.homeboxUrl} className="text-link">
           HomeBox
         </ExternalLink>{' '}
