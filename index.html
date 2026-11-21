@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeBox Companion: a mobile app for your HomeBox inventory</title>
+    <meta
+      name="description"
+      content="An offline-first iPhone, iPad and Android companion for your self-hosted HomeBox server. Browse and edit items, scan asset IDs and barcodes, and keep working without a signal. Coming soon."
+    />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <script>
+      (function () {
+        var stored = null;
+        try {
+          stored = localStorage.getItem('hb_landing_theme');
+        } catch (e) {}
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
