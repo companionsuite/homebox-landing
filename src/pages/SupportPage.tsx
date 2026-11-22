@@ -92,6 +92,13 @@ export const SupportPage: React.FC<SupportPageProps> = ({ onNavigate }) => (
         . You&apos;ll need a free GitHub account. Don&apos;t post passwords, tokens or your server address
         in an issue.
       </p>
+      <p>
+        You can also email{' '}
+        <a href={`mailto:${SITE_CONFIG.supportEmail}`} className="text-link">
+          {SITE_CONFIG.supportEmail}
+        </a>
+        . Never send a password or token by email.
+      </p>
     </LegalSection>
 
     <LegalSection icon={ShieldCheck} title="Privacy">

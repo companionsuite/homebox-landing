@@ -2,6 +2,7 @@ export const SITE_CONFIG = {
   appName: 'Companion for HomeBox',
   appId: 'app.homebox.companion',
   issuesRepoUrl: 'https://github.com/companionsuite/homebox-landing',
+  supportEmail: 'support.homebox@milliways.si',
   publisher: 'Companion Suite',
   siteUrl: 'https://homebox.milliways.si/',
   homeboxUrl: 'https://github.com/sysadminsmedia/homebox',
