@@ -60,11 +60,13 @@ export const PrivacyPage: React.FC<PrivacyPageProps> = ({ onNavigate }) => (
 
     <LegalSection icon={Camera} title="5. Camera, photos and local network">
       <p>
-        The app uses the camera only when you take a photo of an item. It uses the photo picker only when
-        you choose an existing photo to attach to an item, and the photo library only when you save an
-        item photo. Barcodes and asset IDs are typed in, not read by the camera. Photos go only to your own
-        HomeBox server. On iOS, the app asks for local network access so it can reach a HomeBox server in
-        your home.
+        The app uses the camera when you take a photo of an item and when you scan a barcode, QR code or
+        asset label. Scanning happens on your device: the camera images are processed there and are not
+        uploaded by the app. Only the code that was read is sent, to your own HomeBox server, to find the
+        item or product. It uses the photo picker only when you choose an existing photo to attach to an
+        item, and the photo library only when you save an item photo. Photos you attach to items go only
+        to your own HomeBox server. On iOS, the app asks for local network access so it can reach a
+        HomeBox server in your home.
       </p>
     </LegalSection>
 

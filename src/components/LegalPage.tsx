@@ -19,7 +19,7 @@ export const LegalPage: React.FC<LegalPageProps> = ({ icon: PageIcon, title, chi
       </span>
       <h1 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">{title}</h1>
       <p className="text-sm text-[var(--ink-muted)]">
-        Last updated: November 21, 2026 &middot; App: {SITE_CONFIG.appName} ({SITE_CONFIG.appId}) &middot;
+        Last updated: November 22, 2026 &middot; App: {SITE_CONFIG.appName} ({SITE_CONFIG.appId}) &middot;
         Publisher: {SITE_CONFIG.publisher}
       </p>
     </div>
